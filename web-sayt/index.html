@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ishchi Bot — Kelajak ish boshqaruvchisi</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container" id="app">
+      <!-- Navbar (Always Visible) -->
+      <nav id="navbar">
+        <div class="logo">ISHCHI BOT</div>
+        <div id="nav-content" class="nav-links">
+          <a href="#features">Imkoniyatlar</a>
+          <a href="#about">Biz haqimizda</a>
+          <button id="login-btn" class="btn btn-sm">Kirish</button>
+        </div>
+      </nav>
+
+      <!-- View: Home (Landing) -->
+      <main id="home-view" class="view">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Ish topish va <span>xizmat ko'rsatish</span> endi ancha oson!</h1>
+            <p>
+              Ishchi Bot — bu sizning ishonchli yordamchingiz. Ish qidiring, 
+              vakansiya e'lon qiling yoki kuryerlik xizmatidan foydalaning. 
+              Mustaqil web-ilova orqali barchasi tezkor!
+            </p>
+            <div class="hero-btns" style="display: flex; gap: 1rem; margin-top: 2rem; justify-content: center;">
+              <a href="https://t.me/ishchiKH_bot" target="_blank" class="btn start-now" style="text-decoration: none; display: inline-block;">🚀 Hozir boshlash</a>
+              <button id="hero-dashboard-btn" class="btn btn-outline">👤 Shaxsiy kabinet</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/mockup.png" alt="Ishchi Bot Mockup" class="mockup-img">
+          </div>
+        </section>
+
+        <div class="stats">
+          <div class="stat-item">
+            <h4>10,000+</h4>
+            <p>Foydalanuvchilar</p>
+          </div>
+          <div class="stat-item">
+            <h4>5,000+</h4>
+            <p>Muvaffaqiyatli ishlar</p>
+          </div>
+          <div class="stat-item">
+            <h4>24/7</h4>
+            <p>Texnik yordam</p>
+          </div>
+        </div>
+
+        <section class="features" id="features">
+          <div class="section-title">
+            <h2>Nega aynan biz?</h2>
+            <p>Botimiz taqdim etayotgan qulayliklar bilan tanishing</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔍</div>
+              <h3>Oson qidiruv</h3>
+              <p>Sizga mos keladigan ishni bir zumda, tushunarsiz menyularda adashmasdan toping.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Tezkor yetkazib berish</h3>
+              <p>Kuryerlik xizmati, lokatsiyani aniqlash va aqlli masofa hisoblagich tizimi.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3>Xavfsiz tizim</h3>
+              <p>Admin nazorati va foydalanuvchilarni tekshirish tizimi orqali ishonchli muhit.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- View: Dashboard (User Personal Area) -->
+      <main id="dashboard-view" class="view hidden">
+        <header class="view-header">
+          <h2>Xush kelibsiz, <span id="user-name"></span>!</h2>
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="home_dash">🏠 Bosh sahifa</button>
+            <button class="tab-btn" data-tab="workers">👥 Ishchilar</button>
+            <button class="tab-btn" data-tab="employers">💼 Ish beruvchilar</button>
+            <button class="tab-btn" data-tab="jobs">🔍 Ishlar</button>
+            <button class="tab-btn" data-tab="orders">🚚 Yetkazib berish</button>
+            <button class="tab-btn" data-tab="post">➕ E'lon berish</button>
+            <button class="tab-btn" data-tab="profile">👤 Profil</button>
+          </div>
+        </header>
+
+        <section id="tab-content">
+          <!-- Content injected via JS -->
+        </section>
+      </main>
+
+      <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Ishchi Bot Web. Barcha huquqlar himoyalangan.</p>
+      </footer>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
